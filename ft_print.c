@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yaatlaou <yaatlaou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yasmine <yasmine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 11:57:39 by yaatlaou          #+#    #+#             */
-/*   Updated: 2024/01/05 14:42:36 by yaatlaou         ###   ########.fr       */
+/*   Updated: 2024/01/07 14:51:31 by yasmine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void    putstr(const char *str)
     i = 0;
     while (str[i] != '\0')
         ft_putchar(str[i++]);
-
 }
 // #include <stdio.h>
 // int main(void)

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yaatlaou <yaatlaou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yasmine <yasmine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 14:04:28 by yaatlaou          #+#    #+#             */
-/*   Updated: 2024/01/05 15:28:06 by yaatlaou         ###   ########.fr       */
+/*   Updated: 2024/01/11 13:15:52 by yasmine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libftprintf"
 #include <unistd.h>
 
 void	ft_putnbr(int n)
