@@ -6,7 +6,7 @@
 #    By: yaatlaou <yaatlaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/22 22:13:45 by yasmine           #+#    #+#              #
-#    Updated: 2024/01/05 15:47:47 by yaatlaou         ###   ########.fr        #
+#    Updated: 2024/01/16 16:33:08 by yaatlaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,9 @@ SO_NAME = libftprintf.so
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
 SOURCES = ft_printf.c\
-	ft_print.c\
-	ft_putnbr.c\
+	print_char.c\
+	print_string.c\
+	print_nbr.c\
 
 OBJ = $(SOURCES:.c=.o)
 
@@ -38,4 +39,4 @@ clean:
 
 re:	fclean all
 
-.PHONY: all
+.PHONY: all re fclean clean
