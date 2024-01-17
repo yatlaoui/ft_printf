@@ -6,13 +6,13 @@
 /*   By: yaatlaou <yaatlaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:51:56 by yaatlaou          #+#    #+#             */
-/*   Updated: 2024/01/16 14:52:31 by yaatlaou         ###   ########.fr       */
+/*   Updated: 2024/01/17 20:28:49 by yaatlaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void    ft_putchar(char c)
+void	ft_putchar(char c)
 {
-    write(1, &c, 1);
+	write(1, &c, 1);
 }
