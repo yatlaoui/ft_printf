@@ -6,7 +6,7 @@
 #    By: yaatlaou <yaatlaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/22 22:13:45 by yasmine           #+#    #+#              #
-#    Updated: 2024/01/16 16:33:08 by yaatlaou         ###   ########.fr        #
+#    Updated: 2024/01/22 18:24:08 by yaatlaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,10 @@ SO_NAME = libftprintf.so
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
 SOURCES = ft_printf.c\
-	print_char.c\
-	print_string.c\
-	print_nbr.c\
+	ft_putchar.c\
+	ft_putstr.c\
+	ft_putnbr.c\
+	ft_putnbr_unsigned.c\
 
 OBJ = $(SOURCES:.c=.o)
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yasmine <yasmine@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yaatlaou <yaatlaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 22:13:37 by yasmine           #+#    #+#             */
-/*   Updated: 2024/01/22 12:22:48 by yasmine          ###   ########.fr       */
+/*   Updated: 2024/01/22 20:39:46 by yaatlaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,66 +14,46 @@
 #include <stdarg.h>
 #include <stdio.h>
 
-static int	format_check(const char *format, void *arg)
+static int	format_check(const char *format, va_list args)
 {
 	int i;
 
     i = 0;
-    if (format == 'c')
-        i = i + ft_putchar((char)arg);
-    else if (format == 's')
-        i = i + print_string()
-
-
+    if (*format == 'c')
+        i = i + ft_putchar(va_arg(args, int));
+    else if (*format == 's')
+        i = i + ft_putstr(va_arg(args, const char*));
     return (i);
 }
 
 int	ft_printf(const char *format, ...)
 {
-    va_list args; // Déclare une variable va_list
+    va_list args;
     int i;
 
     i = 0;
-    va_start(args, format);  // Initialise la liste des arguments variables
-    while (format != '\0')
+    va_start(args, format);
+    while (format[i] != '\0')
     {
-        
+        if (format[i] == '%')
+        {
+            i++;
+            i += format_check(format + 1, args);
+        }
+        else
+            i += ft_putchar(format[i]);
     }
-    va_end(args); // Termine l'utilisation de la liste des arguments variables
+    va_end(args);
     return (i);
 }
 
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	printf("Pour le c : \n");
-// 	char c = 'b';
-// 	printf("%c\n", c);
-
-// 	printf("Pour le s : \n");
-// 	printf("%s", "hehe\n");
-
-// 	printf("Pour le p : \n");
-// 	int *ptr;
-// 	printf("%p\n", &ptr);
-
-// 	printf("Pour le d : \n");
-// 	printf("%d\n", 42);
-
-// 	printf("Pour le i : \n");
-// 	printf("%i\n", 24);
-
-// 	printf("Pour le u : \n");
-// 	printf("%u\n", 420);
-
-// 	printf("Pour le x : \n");
-// 	printf("%x\n", 15);
-
-// 	printf("Pour le X : \n");
-// 	printf("%X\n", 28);
-
-// 	printf("Pour le pourcentage : \n");
-// 	printf("%%\n");
-// 	return (0);
-// }
+int	main(void)
+{
+	char m = 'p';
+	printf("%c\n", m);
+    ft_printf("%c\n", m);
+    
+	printf("%s\n", "Hello");
+    ft_printf("%s\n", "Hello");
+	return (0);
+}

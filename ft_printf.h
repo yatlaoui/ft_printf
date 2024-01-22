@@ -6,7 +6,7 @@
 /*   By: yaatlaou <yaatlaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 20:29:37 by yaatlaou          #+#    #+#             */
-/*   Updated: 2024/01/17 22:31:31 by yaatlaou         ###   ########.fr       */
+/*   Updated: 2024/01/22 20:16:14 by yaatlaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 # include <unistd.h>
 
 int		ft_printf(const char *format, ...);
-void	ft_putchar(char c);
-void	putstr(const char *str);
+int		ft_putchar(char c);
+int		ft_putstr(const char *str);
 void	ft_putnbr(int n);
 void	ft_putnbr_unsigned(unsigned int n);
 

@@ -3,23 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yasmine <yasmine@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yaatlaou <yaatlaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/05 14:04:28 by yaatlaou          #+#    #+#             */
-/*   Updated: 2024/01/11 13:15:52 by yasmine          ###   ########.fr       */
+/*   Created: 2024/01/22 17:48:13 by yaatlaou          #+#    #+#             */
+/*   Updated: 2024/01/22 17:51:48 by yaatlaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf"
-#include <unistd.h>
+#include "ft_printf.h"
 
 void	ft_putnbr(int n)
 {
 	if (n == -2147483648)
-    {
-        write(1, "-2147483648", 11);
-        return ;
-    }
+	{
+		write(1, "-2147483648", 11);
+		return ;
+	}
 	if (n < 0)
 	{
 		ft_putchar('-');
@@ -29,9 +28,3 @@ void	ft_putnbr(int n)
 		ft_putnbr(n / 10);
 	ft_putchar(n % 10 + '0');
 }
-
-// int	main(void)
-// {
-// 	ft_putnbr(-42);
-// 	return (0);
-// }
