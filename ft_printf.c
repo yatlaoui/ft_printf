@@ -3,27 +3,45 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yaatlaou <yaatlaou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yasmine <yasmine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 22:13:37 by yasmine           #+#    #+#             */
-/*   Updated: 2024/01/17 20:37:29 by yaatlaou         ###   ########.fr       */
+/*   Updated: 2024/01/22 12:22:48 by yasmine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdarg.h>
+#include <stdio.h>
 
-int	format_check(int result)
+static int	format_check(const char *format, void *arg)
 {
-	int result;
+	int i;
 
-    result = 0;
-    if (result == 'c')
-        result = result + print_char(format);
-    if (result == 's')
+    i = 0;
+    if (format == 'c')
+        i = i + ft_putchar((char)arg);
+    else if (format == 's')
+        i = i + print_string()
+
+
+    return (i);
 }
 
-int	ft_printf(const char *format, ...);
+int	ft_printf(const char *format, ...)
+{
+    va_list args; // Déclare une variable va_list
+    int i;
 
+    i = 0;
+    va_start(args, format);  // Initialise la liste des arguments variables
+    while (format != '\0')
+    {
+        
+    }
+    va_end(args); // Termine l'utilisation de la liste des arguments variables
+    return (i);
+}
 
 // #include <stdio.h>
 
