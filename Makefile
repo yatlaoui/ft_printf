@@ -6,7 +6,7 @@
 #    By: yaatlaou <yaatlaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/22 22:13:45 by yasmine           #+#    #+#              #
-#    Updated: 2024/01/22 18:24:08 by yaatlaou         ###   ########.fr        #
+#    Updated: 2024/01/23 19:02:29 by yaatlaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ SOURCES = ft_printf.c\
 	ft_putchar.c\
 	ft_putstr.c\
 	ft_putnbr.c\
-	ft_putnbr_unsigned.c\
+	ft_putnbr_base.c\
+	ft_ptr.c\
 
 OBJ = $(SOURCES:.c=.o)
 
