@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yaatlaou <yaatlaou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yasmine <yasmine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 22:13:37 by yasmine           #+#    #+#             */
-/*   Updated: 2024/01/23 20:08:09 by yaatlaou         ###   ########.fr       */
+/*   Updated: 2024/01/25 03:29:58 by yasmine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ static int	format_check(const char *format, va_list args)
 		i += ft_putchar(va_arg(args, int));
 	else if (*format == 's')
 		i += ft_putstr(va_arg(args, const char *));
-	// else if (*format == 'p')
-	// 	i += ft_ptr();
+	else if (*format == 'p')
+		i += ft_ptr(va_arg(args, unsigned long int *));
 	else if (*format == 'd' || *format == 'i')
 		i += ft_putnbr(va_arg(args, int));
 	else if (*format == 'u')
@@ -62,10 +62,12 @@ int	ft_printf(const char *format, ...)
 	return (i);
 }
 
-int	main(void)
-{
-	char *ptr = NULL;
-	printf("Vraie fonction : %p\n", &ptr);
-	// ft_printf("Ma fonction : %p\n",*ptr);
-	return (0);
-}
+// int main(void)
+// {
+//     // char *ptr = 9;
+//     // printf("Vraie fonction : %p\n", (void *)&ptr);
+//     // ft_printf("Ma fonction : %p\n", (void *)ptr);
+// 	printf("Vraie fonction : %s\n", "");
+//     ft_printf("Ma fonction : %s\n", "");
+// 	return (0);
+// }
