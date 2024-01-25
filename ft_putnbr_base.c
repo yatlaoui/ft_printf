@@ -6,7 +6,7 @@
 /*   By: yaatlaou <yaatlaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 18:44:40 by yaatlaou          #+#    #+#             */
-/*   Updated: 2024/01/23 19:03:30 by yaatlaou         ###   ########.fr       */
+/*   Updated: 2024/01/25 12:49:54 by yaatlaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ static size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-int	ft_putnbr_base(unsigned long int n, char *base)
+int	ft_putnbr_base(uintptr_t n, char *base)
 {
-	int	i;
-	int	b;
+	int			i;
+	uintptr_t	b;
 
 	i = 0;
 	b = ft_strlen(base);
-	if (n / b != 0)
+	if (n >= b)
 		i += ft_putnbr_base((n / b), base);
 	i += ft_putchar(base[n % b]);
 	return (i);

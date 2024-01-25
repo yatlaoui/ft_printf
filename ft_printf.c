@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yasmine <yasmine@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yaatlaou <yaatlaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 22:13:37 by yasmine           #+#    #+#             */
-/*   Updated: 2024/01/25 03:29:58 by yasmine          ###   ########.fr       */
+/*   Updated: 2024/01/25 12:49:18 by yaatlaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdarg.h>
-#include <stdio.h>
 
 static int	format_check(const char *format, va_list args)
 {
@@ -28,12 +26,12 @@ static int	format_check(const char *format, va_list args)
 	else if (*format == 'd' || *format == 'i')
 		i += ft_putnbr(va_arg(args, int));
 	else if (*format == 'u')
-		i += ft_putnbr_base(va_arg(args, unsigned long int), "0123456789");
+		i += ft_putnbr_base(va_arg(args, unsigned int), "0123456789");
 	else if (*format == 'x')
-		i += ft_putnbr_base(va_arg(args, unsigned long int),
+		i += ft_putnbr_base(va_arg(args, unsigned int),
 				"0123456789abcdef");
 	else if (*format == 'X')
-		i += ft_putnbr_base(va_arg(args, unsigned long int),
+		i += ft_putnbr_base(va_arg(args, unsigned int),
 				"0123456789ABCDEF");
 	else if (*format == '%')
 		i += ft_putchar('%');
@@ -67,7 +65,8 @@ int	ft_printf(const char *format, ...)
 //     // char *ptr = 9;
 //     // printf("Vraie fonction : %p\n", (void *)&ptr);
 //     // ft_printf("Ma fonction : %p\n", (void *)ptr);
-// 	printf("Vraie fonction : %s\n", "");
-//     ft_printf("Ma fonction : %s\n", "");
+// 	char *s = "Hello";
+// 	printf("%d\n", printf("La fonction : %s\n", s));
+//     ft_printf("%d\n", ft_printf("Ma fonction : %s\n", s));
 // 	return (0);
 // }
