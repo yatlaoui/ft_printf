@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yaatlaou <yaatlaou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yasmine <yasmine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 22:13:37 by yasmine           #+#    #+#             */
-/*   Updated: 2024/01/25 12:49:18 by yaatlaou         ###   ########.fr       */
+/*   Updated: 2024/01/27 17:07:59 by yasmine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	format_check(const char *format, va_list args)
 	else if (*format == 's')
 		i += ft_putstr(va_arg(args, const char *));
 	else if (*format == 'p')
-		i += ft_ptr(va_arg(args, unsigned long int *));
+		i += ft_ptr(va_arg(args, uintptr_t *));
 	else if (*format == 'd' || *format == 'i')
 		i += ft_putnbr(va_arg(args, int));
 	else if (*format == 'u')
@@ -59,14 +59,20 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (i);
 }
-
+// #include <stdio.h>
 // int main(void)
 // {
-//     // char *ptr = 9;
-//     // printf("Vraie fonction : %p\n", (void *)&ptr);
-//     // ft_printf("Ma fonction : %p\n", (void *)ptr);
-// 	char *s = "Hello";
-// 	printf("%d\n", printf("La fonction : %s\n", s));
-//     ft_printf("%d\n", ft_printf("Ma fonction : %s\n", s));
+// 	ft_printf("*-*-**-*-* S *-*-**-*-*\n");
+// 	char *s = NULL;
+// 	printf("%d\n", printf("Vraie fonction : %s\n", s));
+//     printf("%d\n", ft_printf("Ma fonction : %s\n", s));
+// 	ft_printf("*-*-**-*-* P *-*-**-*-*\n");
+// 	uintptr_t value = 3; 
+//     uintptr_t *ptrr = &value;
+//     printf("Vraie fonction : %p\n", ptrr);
+// 	ft_printf("Ma fonction : %p\n", ptrr);
+// 	printf("*-*-**-*-* X *-*-**-*-*\n");
+// 	printf("Vraie fonction : %X\n", 42);
+// 	ft_printf("Ma fonction : %X\n", 42);
 // 	return (0);
 // }
