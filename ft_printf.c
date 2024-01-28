@@ -6,7 +6,7 @@
 /*   By: yasmine <yasmine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 22:13:37 by yasmine           #+#    #+#             */
-/*   Updated: 2024/01/27 17:07:59 by yasmine          ###   ########.fr       */
+/*   Updated: 2024/01/28 16:41:56 by yasmine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int	ft_printf(const char *format, ...)
 //     printf("Vraie fonction : %p\n", ptrr);
 // 	ft_printf("Ma fonction : %p\n", ptrr);
 // 	printf("*-*-**-*-* X *-*-**-*-*\n");
-// 	printf("Vraie fonction : %X\n", 42);
-// 	ft_printf("Ma fonction : %X\n", 42);
+// 	printf("Vraie fonction : %X\n", 200);
+// 	ft_printf("Ma fonction : %X\n", 200);
 // 	return (0);
 // }
