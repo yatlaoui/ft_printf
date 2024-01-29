@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yasmine <yasmine@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yaatlaou <yaatlaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 16:42:01 by yaatlaou          #+#    #+#             */
-/*   Updated: 2024/01/27 16:59:30 by yasmine          ###   ########.fr       */
+/*   Updated: 2024/01/29 01:12:30 by yaatlaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(int c) // int ?
+int	ft_putchar(char c)
 {
 	return (write(1, &c, 1));
 }

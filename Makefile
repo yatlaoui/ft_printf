@@ -6,12 +6,11 @@
 #    By: yaatlaou <yaatlaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/22 22:13:45 by yasmine           #+#    #+#              #
-#    Updated: 2024/01/23 19:02:29 by yaatlaou         ###   ########.fr        #
+#    Updated: 2024/01/29 01:23:29 by yaatlaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
-SO_NAME = libftprintf.so
 
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
@@ -33,7 +32,7 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 fclean: clean
-	rm -f $(NAME) $(SO_NAME)
+	rm -f $(NAME)
 
 clean:
 	rm -f $(OBJ)
